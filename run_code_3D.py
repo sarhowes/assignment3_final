@@ -450,7 +450,7 @@ def simulation_setup():
 
 
     default_type = input('>> Select default type:\n * original (argon, 0 charge, 0 E/B field)\n * NaCl_charged (Na, Cl, +/-1 charge, 0 E/B field)\n \
-* NaCl_heavymass (Na mass/1000, Cl mass*1000, +/-1 charge, 0 E/B field)\n * NaCl_highcharge (Na, Cl, +/-10 charge, 0 E/B field)\n \
+* NaCl_heavymass (Na mass/10, Cl mass*10, +/-1 charge, 0 E/B field)\n * NaCl_highcharge (Na, Cl, +/-10 charge, 0 E/B field)\n \
 * NaCl_Efield (Na, Cl, +/-1 charge, 50 E field, 0 B field)\n * NaCl_Bfield (Na, Cl, +/-1 charge, 0 Efield, 15 B field)\n \
 * custom (customize all parameters)\n >>')
     
@@ -635,7 +635,7 @@ def simulation_setup():
         number_steps = int(input('>> Input number of steps:'))
         tuning_percent = float(input('>> Input fraction of simulation to run equilibrium on:'))
         alpha = float(input('>> Input Ewald parameter (alpha): '))
-        grid_size = float(input('>> Input grid size (for reciprocal space calculation): '))
+        grid_size = int(input('>> Input grid size (for reciprocal space calculation): '))
         external_electric_field = float(input('>> Input strength of electric field (input 0 to turn off):'))
         external_magnetic_field = float(input('>> Input strength of magnetic field (input 0 to turn off):'))
         particle_charge = float(input('>> Input charge of particles (if >0, will be +/- alternating like a crystal lattice):'))
