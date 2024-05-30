@@ -788,14 +788,6 @@ if __name__ == "__main__":
 
     length = (number_particles / density)**(1/3) #for 3D
 
-    run_store_pressure = 'on'
-    run_plot_energy = 'on'
-    run_plot_pcf = 'on'
-    run_plot_3D_position = 'off'
-    run_mean_pressure = 'on'
-    run_mean_pcf = 'on'
-
-
     # start particle simulator
     particle_simulator = Particle_Functions3D(length, grid_size, alpha, number_particles)
     print('/=/=/=/=/ STARTING SIMULATION /=/=/=/=/')
@@ -803,7 +795,7 @@ if __name__ == "__main__":
     main_path = f'{state}/{len(particle_mass)}_particles_{particle_charge}_charge_{ex_E_field}_Efield_{ex_M_field}_Bfield'
     if not os.path.exists(main_path): 
         os.makedirs(main_path)
-    text_file = open(f"{main_path}/list_of _parameters.txt", "w")
+    text_file = open(f"{main_path}/list_of_parameters.txt", "w")
     text_file.write(
         '==================================\n'
         '==== Final setup parameters: =====\n'

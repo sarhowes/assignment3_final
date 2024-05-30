@@ -197,7 +197,8 @@ class Particle_Functions3D:
 
         Returns:
             recip_energy(float), forces(np.ndarray): total potential reciprocal energy, 
-                                                     reciprocal forces between all particles in x,y,z directions shape: (Nparticles, 3)
+                                                     reciprocal forces between all particles in 
+                                                     x,y,z directions shape: (Nparticles, 3)
         """
 
         length = self.length
@@ -225,7 +226,7 @@ class Particle_Functions3D:
 
         force_term = np.zeros((grid_size, grid_size, grid_size, 3), dtype=complex)
         for i in range(3):
-            force_term[..., i] = (1j * kvecs[i] * grid_product * kvec_exp_factor)
+            force_term[..., i] = (1j*kvecs[i]*grid_product*kvec_exp_factor)
 
 
         force_term = ifftn(force_term, axes=(0, 1, 2)).real
