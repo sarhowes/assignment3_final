@@ -443,7 +443,7 @@ def simulation_setup():
 
     print(
         '===========================================================\n'
-        '======== Molecular Dynamics with the Argon Atom ===========\n'
+        '======== Molecular Dynamics with Coulombic Forces ==========\n'
         '====== simulation by: Sarah Howes and Lars Reems ==========\n'
         '==========================================================='
         )
